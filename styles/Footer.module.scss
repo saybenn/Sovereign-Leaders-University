@@ -115,10 +115,25 @@
 
       .right {
         width: 40%;
-        ul.footerItems {
+        .footerItems {
             align-items: flex-start;              
             font-size: 1.4rem;
         }
       }
     }
   }
+
+@media (min-width: 850px) {
+  .footer {
+    &Top {
+      font-size: $fontRegular;
+
+      .right {
+        ul.footerItems {
+          font-size: $fontRegular;
+        }
+      }
+    }
+
+  }
+}
