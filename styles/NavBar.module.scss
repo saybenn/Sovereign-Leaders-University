@@ -182,7 +182,7 @@
                 span {
                     color: white;
                     font-size: 2rem;
-                    @include fontSemiItalic;
+                    @include fontAlt;
                 }
                 .nextImageContainer {
                     width: 20%;
@@ -273,13 +273,13 @@
                 display: flex;
                 align-items: flex-end;
                 justify-content: initial;
-                width: 35%;
+                width: 50%;
                 span {
-
                     margin-left: 1rem;
                     color: white;
-                    font-size: 2rem;
+                    font-size: $fontXLarge;
                 }
+
                 .nextImageContainer {
                     width: 13%;
                     > div {
@@ -299,16 +299,14 @@
                 }
             }
             ul {   
-                width: 60%;
+                width: 30%;
                 li.navItem {
-                    font-size: 1.8rem;  
+                    font-size: $fontLarge; 
                     ul {
                         position: absolute;
                         top: 120%;
                         left: 200%;
                         list-style: none;
-                        display: flex;
-                        flex-direction: row-reverse;
 
                         li {
                             font-size: 1.3rem;
@@ -326,6 +324,10 @@
 
                         &:hover {
                             color: #5e9fe9;
+                        }
+
+                        span {
+                            @include fontAlt;
                         }
                     }
                 }

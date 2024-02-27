@@ -13,8 +13,6 @@ const VideoPlayer = () => {
     <div className={styles.reactPlayer}>
       <VidPlayer
         wrapper="div"
-        width="100%"
-        height="100%"
         url={videosrc}
         controls={true}
         // light is usefull incase of dark mode

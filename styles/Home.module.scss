@@ -41,9 +41,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 0;
     row-gap: 2rem;
     background-color: black;
+    width: 100%;
+    padding: 5rem 0;
 
     .box {
       display: flex;
@@ -69,6 +70,45 @@
           padding: 0 .6rem;
           border-right: 1px solid $yellowColor;
           border-left: 1px solid $yellowColor;
+        }
+      }
+    }
+  }
+}
+
+
+//Tablet
+@media (min-width: 750px) {
+
+}
+
+//Laptop
+@media (min-width: 850px) {
+  .main {
+    .intro {
+      h3 {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        font-size: $fontLarge;
+        line-height: 3rem;
+      }
+    }
+    .steps {
+      row-gap: 5rem;
+      .box {
+        svg {
+          font-size: $fontHuge;
+        }
+        .container {
+          padding: 1rem 2rem;
+          h3 {
+            font-size: $fontLarge;
+          }
+          p {
+            font-size: $fontBig;
+          }
         }
       }
     }

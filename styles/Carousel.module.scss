@@ -50,9 +50,8 @@
         }
 }
 
-@media (min-width: 760px) {
-  .carousel {
-        
+@media (min-width: 750px) {
+  .carousel {   
     &Item{
         position: relative;
         min-height: 80vh;
@@ -73,4 +72,25 @@
         object-fit: cover;
     }
   }
+}
+
+//Tablet
+@media (min-width: 750px) {
+
+}
+
+//Laptop {
+@media (min-width: 850px) {
+    .carousel {
+        &Caption {
+            h2 {
+                font-size: $fontHuge;
+            }
+
+            button {
+                font-size: $fontLarge;
+                border: 2px solid $primaryColor;
+            }
+        }
+    }
 }

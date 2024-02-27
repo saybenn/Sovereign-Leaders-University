@@ -89,72 +89,25 @@ const NavBar = ({ close, handleClose }) => {
           >
             <span>Sovereign Leaders University</span>
           </Link>
-          {/* <ul className={styles.navItems}>
+          <ul className={styles.navItems}>
             <li className={styles.navItem}>
               <Link aria-label="Home Page" href="/" scroll={true}>
-                Home
+                <span>Home</span>
               </Link>
             </li>
             <li className={styles.navItem}>
-              <Link className={styles.navItem} href="/about" scroll={true}>
-                About Us
+              {" "}
+              <Link aria-label="About Page" href="/about" scroll={true}>
+                <span>About</span>
               </Link>
             </li>
-            <li
-              onMouseEnter={() => setIsShown(true)}
-              className={styles.navItem}
-            >
-              <Link className={styles.navItem} href="/services" scroll={true}>
-                Services
-              </Link>{" "}
-              {isShown && (
-                <ul onMouseLeave={() => setIsShown(false)}>
-                  <li>
-                    <Link
-                      aria-label="Junk Removal"
-                      href="/services/junk-removal"
-                      scroll={true}
-                    >
-                      Junk Removal
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      aria-label="Demolition"
-                      href="/services/demolition"
-                      scroll={true}
-                    >
-                      Demolition
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      aria-label="Dumpster Supply"
-                      href="/services/dumpster-supply"
-                      scroll={true}
-                    >
-                      Dumpster Supply
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      aria-label="Labor"
-                      href="/services/labor"
-                      scroll={true}
-                    >
-                      Labor
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-
             <li className={styles.navItem}>
-              <Link className={styles.navItem} href="/contact" scroll={true}>
-                Contact
+              {" "}
+              <Link aria-label="Blog Page" href="/blog" scroll={true}>
+                <span>Blog</span>
               </Link>
             </li>
-          </ul> */}
+          </ul>
         </div>
       </nav>
 
