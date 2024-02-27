@@ -1,0 +1,63 @@
+$whiteColor: #f0f0f0;
+$offWhite: #9b9b9b;
+$yellowColor: rgba(150, 127, 0, 0.933);
+$primaryColor: rgba(124, 106, 0, 0.933);
+$blackColor: rgb(7, 7, 7);
+$fontMin: .7rem;
+$fontMini: .7rem;
+$fontRegular: 1rem;
+$fontSmall: 1.3rem;
+$fontMedium: 1.5rem;
+$fontBig: 2rem;
+$fontLarge: 2.5rem;
+$fontXLarge: 4rem;
+$fontHuge: 5rem;
+$fontXHuge: 7rem;
+
+@mixin fontRegular {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@mixin fontAlt {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@mixin fontSemiBold {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+} 
+
+@mixin fontLight {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+} 
+
+@mixin fontItalic {
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+} 
+
+@mixin fontItalicBold {
+    font-family: "Roboto Flex",sans-serif;
+    font-weight: 700;
+    font-style: italic;
+} 
+
+@mixin fontItalicBlack {
+    font-family: "Roboto Flex",sans-serif;
+    font-weight: 900;
+    font-style: normal;
+} 
+
+@mixin fontSemiItalic {
+    font-family: "Roboto Flex",sans-serif;
+    font-weight: 600;
+    font-style: italic;
+} 

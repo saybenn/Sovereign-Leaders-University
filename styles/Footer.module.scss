@@ -1,0 +1,124 @@
+@import 'variables.scss';
+
+//Footer 
+.footer {
+    background: $blackColor;
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    text-align: center;
+    color: white;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem .7rem .3rem;
+    @include fontRegular;
+
+    &Top {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid white;
+      padding-bottom: .5rem;
+      margin-bottom: .5rem;
+
+      .left {
+        text-align: left;
+        display: flex;
+        flex-direction: column;   
+        row-gap: .4rem;  
+
+        a {
+          display: flex;
+          align-items: center;
+          column-gap: .2rem;
+          color: white;            
+          transition: all .3s ease-in-out;
+
+          // &:hover {
+          //   color: $accent2;
+          // }
+        }
+
+        .nextImageContainer {
+          width: 50%;
+          display: flex;
+          align-items: flex-start;
+            > div {
+                position: unset !important;
+            }
+
+          .nextImage {
+              object-fit: contain;
+              width: 100% !important;
+              position: relative !important;
+              height: unset !important;
+          }
+        }
+      }
+
+      .right {
+        text-align: right;
+        ul {
+          list-style: none;
+          font-size: .9rem;
+          margin-bottom: .4rem;
+          li {
+            color: white;
+          }
+          a {
+            color: white;
+            transition: all .3s ease-in-out;
+
+            // &:hover {
+            //   color: $accent2;
+            // }
+          }
+        }
+      }
+    }
+
+    &Bottom {
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: $fontMin;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+  @media (min-width: 750px) {
+    .footer {
+      font-size: 1.4rem;
+
+      &Left {
+        display: flex;
+        width: 30%;
+        justify-content: flex-end;
+        .footerImgContainer {
+          position: relative;
+          height: 16vh;
+          width: 60%;
+        }
+      }
+
+
+
+      .right {
+        width: 40%;
+        ul.footerItems {
+            align-items: flex-start;              
+            font-size: 1.4rem;
+        }
+      }
+    }
+  }

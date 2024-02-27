@@ -1,0 +1,335 @@
+@import 'variables.scss';
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    height: 3rem;
+    padding-top: .3rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: $whiteColor;
+    transition: all .3s ease-in-out;
+
+    .navDesktop {
+        display: none;
+    }
+
+    .navMobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        padding: 0;
+        .nav {
+            &Left {
+                color: white;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;         
+                width: 100%;
+                column-gap: .5rem;
+                font-size: $fontSmall;     
+
+                
+                .menu {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                a, p {
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    column-gap: .2rem;
+                    transition: all .3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        // color: $accent;
+                    }
+
+                    span {
+                        @include fontAlt;
+                    }
+                }
+            }
+
+            &Right {
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;   
+                    text-align: center;
+                    color: $whiteColor;
+                    span {
+                        width: 100%;              
+                        @include fontAlt;
+
+                    }
+
+                    .nextImageContainer {
+                        width: 17%;
+                        > div {
+                            position: unset !important;
+                        }
+
+                        .nextImage {
+                            object-fit: contain;
+                            width: 100% !important;
+                            position: relative !important;
+                            height: unset !important;
+
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }            
+    }
+}
+    .sideMobileNav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 55%;
+        background: black;
+        border-right: 1px solid #d8d8d8;
+        height: 100vh;
+        padding: 1rem;
+        left: -51%;
+        transition: all .3s ease-in-out;
+
+        .navItems {
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            font-size: 2rem;
+            row-gap: .5rem;
+            @include fontRegular;
+            list-style: none;
+            color: $whiteColor;
+
+
+            & * {            
+                transition: all .3s ease-in-out;
+               &:hover {
+                color: #ffe600;
+               } 
+            }
+
+            .closeBtn {
+                position: absolute;
+                top: 0;
+                left: 85%;
+                font-size: 1.3rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            } 
+
+            .navItem {
+                font-size: 1.5rem;
+            }
+
+            ul {
+                li {
+                    font-size: 1.1rem;
+                    border-bottom: 1px dotted #d8d8d8;
+                    width: 93%;
+                    float: right;
+                    margin: .2rem 0;
+                }
+            }
+
+            >li:last-child {
+                padding-bottom: .5rem;
+                border-bottom: 1px solid #d8d8d8;
+            }
+        }
+    }  
+
+//TABLET
+@media (min-width: 750px) {
+    .navBar {
+        height: 7.5rem;
+        background: $blackColor;
+        .navDesktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 1rem;
+            .logo {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 39%;
+                span {
+                    color: white;
+                    font-size: 2rem;
+                    @include fontSemiItalic;
+                }
+                .nextImageContainer {
+                    width: 20%;
+                    > div {
+                        position: unset !important;
+                    }
+
+                    .nextImage {
+                        object-fit: contain;
+                        width: 100% !important;
+                        position: relative !important;
+                        height: unset !important;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 70%;
+                li.navItem {
+                    position: relative;
+                    font-size: 1.9rem;
+                    a, p {
+                        color: white;
+                        transition: all .3s ease-in-out;
+                        &:hover {
+                            cursor: pointer;
+                            // color: $accent;
+                        }
+                    }
+
+                    ul {
+                        position: absolute;
+                        top: 120%;
+                        left: 100%;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        
+
+                        li {
+                            display: flex;
+                            align-items: center;
+                            font-size: 1rem;
+                            padding: .8rem;
+                            background: $blackColor;
+                            border-right: 1px dashed $whiteColor;
+                            transition: all .3s ease-in-out;
+                            height: 55px;
+                            &:last-child {
+                                border-left: 1px dashed $whiteColor;
+                            }
+
+                            // &:hover {
+                            //     color: $accent;
+                            // }
+                        }
+                    }
+                }
+            }
+        }   
+        .navMobile {
+            display: none;
+        }
+    }
+}
+
+//DESKTOP 
+@media (min-width: 850px) {
+ .navBar {
+    height: 6rem;
+    background: $blackColor;
+    display: flex;
+        div.navDesktop {
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .logo {
+                display: flex;
+                align-items: flex-end;
+                justify-content: initial;
+                width: 35%;
+                span {
+
+                    margin-left: 1rem;
+                    color: white;
+                    font-size: 2rem;
+                }
+                .nextImageContainer {
+                    width: 13%;
+                    > div {
+                        position: unset !important;
+                    }
+
+                    .nextImage {
+                        object-fit: contain;
+                        width: 100% !important;
+                        position: relative !important;
+                        height: unset !important;
+
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            ul {   
+                width: 60%;
+                li.navItem {
+                    font-size: 1.8rem;  
+                    ul {
+                        position: absolute;
+                        top: 120%;
+                        left: 200%;
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row-reverse;
+
+                        li {
+                            font-size: 1.3rem;
+                            padding: 1rem;
+                            background: black;
+                            border-right: 1px dashed $whiteColor;
+                            transition: all .3s ease-in-out;
+                            &:last-child {
+                                border-left: 1px dashed $whiteColor;
+                            }
+                        }
+                    }
+                    a {
+                        transition: all .3s ease-in-out;    
+
+                        &:hover {
+                            color: #5e9fe9;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}

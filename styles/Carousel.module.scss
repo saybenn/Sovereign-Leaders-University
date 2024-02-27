@@ -1,0 +1,76 @@
+@import 'variables.scss';
+
+.carousel {
+    width: 100%;
+    margin: auto;
+
+    &Item {
+        min-height: 50vh;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .8;
+        }
+    }
+            &Image {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            inset: 0;
+        }
+
+        &Caption {
+            text-align: left;
+            top: 40%;
+            left: 10%;
+            position: absolute;
+            width: 70%;
+            z-index: 50;
+
+            h2 {
+                @include fontAlt;
+            }
+            button {
+                @include fontAlt;
+                border: 1px solid $primaryColor;
+                background: transparent;
+                color: white;
+                padding: .3rem .5rem .2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+}
+
+@media (min-width: 760px) {
+  .carousel {
+        
+    &Item{
+        position: relative;
+        min-height: 80vh;
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            opacity: .55;
+        }
+    }
+
+    &Image {
+        object-fit: cover;
+    }
+  }
+}
